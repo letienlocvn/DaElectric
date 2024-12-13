@@ -1,9 +1,9 @@
 
 „
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(İ—´“8‘ŠÑ×º2J$04fd642a-2e51-41e5-adf0-1ba877eedb5b
-r	java:S106"+Replace this use of System.err by a logger.(•è™¦ÿÿÿÿÿ8“ŠÑ×º2J$49957b22-308f-459c-a5ae-476504f2b083
-r	java:S106"+Replace this use of System.out by a logger.(Ñ»òÚıÿÿÿÿ8ŸŠÑ×º2J$2f0c18cd-ad34-4e0c-a07d-b119144da9fb
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(İ—´“8‘ŠÑ×º2J$04af097d-51f1-4f67-a35e-472f853cdbd2
+r	java:S106"+Replace this use of System.err by a logger.(•è™¦ÿÿÿÿÿ8“ŠÑ×º2J$83e0e798-ce45-4843-8105-8a633481d742
+r	java:S106"+Replace this use of System.out by a logger.(Ñ»òÚıÿÿÿÿ8ŸŠÑ×º2J$586b6b0a-516b-4bf2-b24f-6593ed1379b9
 k
 java:S1481")Remove this unused "cell" local variable.(º‚¯
-8ÕÒ××º2J$8af5aeb8-2d7e-4b1f-88f7-eb22293c1c15
-m	java:S106."+Replace this use of System.out by a logger.(‘Ğš8ØÒ××º2J$1caa68d0-90cf-416b-ae84-b56dc33ef2cf
+8ÕÒ××º2J$5da56fde-b838-4543-98cf-2c4ed5fc0276
+m	java:S106."+Replace this use of System.out by a logger.(‘Ğš8ØÒ××º2J$af28cce0-3991-4bde-a9cc-70f6bf267450

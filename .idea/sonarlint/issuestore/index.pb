@@ -15,7 +15,5 @@ Q
 +src/main/java/example/ReadExcelExample.java,1\3\13c7a7081efbc436e21ae6bc4f4beb74ae4ccfd4
 b
 2src/main/java/example/ReadFileTemplateExample.java,c\f\cf993fccc11e18b7b2bca80df5056cf79cb47a57
-[
-+src/main/java/example/ElectricTemplate.java,0\2\027a6099f2b6767f32583072f6469cbf1db2e307
 X
 (src/main/java/example/CloneTemplate.java,a\9\a96b0d3e946538a9b06fdaf4a81a582b61082b24
