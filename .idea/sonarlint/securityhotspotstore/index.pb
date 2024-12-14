@@ -33,3 +33,5 @@ T
 $src/main/java/model/ExcelReader.java,4\5\454d4ff7936c3f33be7b311488e75e3e7a11f42b
 [
 +src/main/java/process/InvoiceGenerator.java,8\6\86762572a98f7097ee81fec8fab78e86cbdba00e
+<
+README_AI.md,2\d\2dd7d8db152cd53f18d97a89bf5f1ccb88fb3db9

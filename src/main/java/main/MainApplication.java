@@ -19,7 +19,7 @@ public class MainApplication {
         records.forEach(System.out::println);
 
         // Example data (replace with actual input)
-        List<Map<String, String>> data = List.of(
+        List<Map<String, Object>> data = List.of(
                 Map.of("index", "1", "fullName", "John Doe", "oldIndex", "100", "newIndex", "200", "unitPrice", "5000"),
                 Map.of("index", "2", "fullName", "Jane Smith", "oldIndex", "150", "newIndex", "250", "unitPrice", "4500")
         );

@@ -1,14 +1,16 @@
 
-“
-java:S1192‰"JDefine a constant instead of duplicating this literal "unitPrice" 3 times.(ßÃÈìıÿÿÿÿ8Öø®¥¼2J$691c3f5b-d5fd-48dc-bbdf-2b56dcf73bbc
+
+java:S2095"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(Û›·ã8¤°§¼2J$ef3e4155-19ce-4ae7-904a-8e2853c72b63
 ’
-java:S1192‰"IDefine a constant instead of duplicating this literal "fullName" 3 times.(ßÃÈìıÿÿÿÿ8Öø®¥¼2J$ae23dacd-cf81-46a0-9a9f-483142bb7a81
-
-java:S1192‰"FDefine a constant instead of duplicating this literal "index" 3 times.(ßÃÈìıÿÿÿÿ8Öø®¥¼2J$3a294f1b-c488-4e02-b2b3-2fdc9b72cf47
-’
-java:S1192‰"IDefine a constant instead of duplicating this literal "oldIndex" 3 times.(ßÃÈìıÿÿÿÿ8Öø®¥¼2J$0d0dbd51-3587-4b44-a9a9-69bc0ccdb090
-’
-java:S1192‰"IDefine a constant instead of duplicating this literal "newIndex" 3 times.(ßÃÈìıÿÿÿÿ8Öø®¥¼2J$07123136-d7ce-4eaa-81db-87e7e123713d
+java:S2095"JUse try-with-resources or close this "XSSFWorkbook" in a "finally" clause.(¼Ö‰»üÿÿÿÿ8¤°§¼2J$d6a08500-db1c-4cf2-adb6-64fc98ecc36f
 š
-java:S3776/"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ò†™ùÿÿÿÿ8Ëù®¥¼2J$3c3d2cb0-01e0-45f5-b852-4ae7111506ba
-s	java:S106”"+Replace this use of System.out by a logger.(–§ÜÔùÿÿÿÿ8Ñù®¥¼2J$f25317c7-2e7c-4e23-b17f-75ba3558e8a6
+java:S3776@"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(Ò†™ùÿÿÿÿ8 ¤°§¼2J$f75359dc-4f71-42d6-8526-8e52367d3d60
+
+java:S6201P"FReplace this instanceof check and cast with 'instanceof String string'(×µùòøÿÿÿÿ8¤¤°§¼2J$30c1a4e2-7e00-4b69-8825-d4e589c8b693
+‰
+java:S6201R"FReplace this instanceof check and cast with 'instanceof Number number'(É ‚Ó8¥¤°§¼2J$1f3b0aff-6e2f-4e9f-b99d-41185ede9159
+ƒ
+java:S6213•":Rename this variable to not match a restricted identifier.(Ãª§…ùÿÿÿÿ8¥âÚ¨¼2J$3997ab79-cfa9-4132-88a2-3230bd011d2c
+s	java:S106£"+Replace this use of System.out by a logger.(–§ÜÔùÿÿÿÿ8²¤°§¼2J$e295f386-c99d-45bd-8083-d6972179fe14
+Y
+java:S1144}"<Remove this unused private "updatePlaceholdersInRow" method.(÷ğ§8æ¹ç¨¼2
