@@ -2,6 +2,7 @@ package process;
 
 import model.ExcelReader;
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -30,7 +31,7 @@ public class InvoiceGenerator {
 
         // Define the template row range
         int startRow = 0;  // Adjust based on template
-        int endRow = 13;   // Last row of the template section
+        int endRow = 11;   // Last row of the template section
 
         int currentRow = endRow + 1; // Start writing after the template section
 
@@ -44,7 +45,7 @@ public class InvoiceGenerator {
                 Row targetRow = sheet.createRow(currentRow++);
 
                 if (sourceRow != null) {
-                    copyRow(sourceRow, targetRow);
+                    copyRow(sheet, sourceRow, targetRow);
                 }
             }
 
@@ -92,15 +93,43 @@ public class InvoiceGenerator {
     // Function to copy template and fill data for subsequent rows
 
     // Function to copy styles and content of a row
-    private static void copyRow(Row sourceRow, Row targetRow) {
+    private static void copyRow(Sheet sheet, Row sourceRow, Row targetRow) {
+        if (sourceRow == null || targetRow == null) return;
+
+        // Copy the row height from the source to the target
+        targetRow.setHeight(sourceRow.getHeight());
+
         for (Cell sourceCell : sourceRow) {
             Cell targetCell = targetRow.createCell(sourceCell.getColumnIndex());
             copyCell(sourceCell, targetCell);
+        }
+
+        // Copy merged regions
+        copyMergedRegions(sheet, sourceRow, targetRow);
+    }
+
+    private static void copyMergedRegions(Sheet sheet, Row sourceRow, Row targetRow) {
+        int targetRowNum = targetRow.getRowNum();
+        int sourceRowNum = sourceRow.getRowNum();
+
+        for (int i = 0; i < sheet.getNumMergedRegions(); i++) {
+            CellRangeAddress region = sheet.getMergedRegion(i);
+            if (region.getFirstRow() == sourceRowNum && region.getLastRow() == sourceRowNum) {
+                CellRangeAddress newRegion = new CellRangeAddress(
+                        targetRowNum,
+                        targetRowNum,
+                        region.getFirstColumn(),
+                        region.getLastColumn()
+                );
+                sheet.addMergedRegion(newRegion);
+            }
         }
     }
 
     // Function to copy individual cell content and style
     private static void copyCell(Cell sourceCell, Cell targetCell) {
+        if (sourceCell == null || targetCell == null) return;
+
         targetCell.setCellStyle(sourceCell.getCellStyle());
 
         switch (sourceCell.getCellType()) {
@@ -115,6 +144,9 @@ public class InvoiceGenerator {
                 break;
             case FORMULA:
                 targetCell.setCellFormula(sourceCell.getCellFormula());
+                break;
+            case BLANK:
+                targetCell.setBlank();
                 break;
             default:
                 break;

@@ -1,16 +1,16 @@
 
 
-java:S2095"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(Û›·ã8¤°§¼2J$ef3e4155-19ce-4ae7-904a-8e2853c72b63
+java:S2095"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(Û›·ã8Ô›´«¼2J$f3e0be1f-5680-4297-b661-cbcde37826d4
 ’
-java:S2095"JUse try-with-resources or close this "XSSFWorkbook" in a "finally" clause.(¼Ö‰»üÿÿÿÿ8¤°§¼2J$d6a08500-db1c-4cf2-adb6-64fc98ecc36f
+java:S2095"JUse try-with-resources or close this "XSSFWorkbook" in a "finally" clause.(¼Ö‰»üÿÿÿÿ8Ô›´«¼2J$8436fc07-a563-4308-8d3e-c7723895d505
 š
-java:S3776@"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(Ò†™ùÿÿÿÿ8 ¤°§¼2J$f75359dc-4f71-42d6-8526-8e52367d3d60
+java:S3776A"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(Ò†™ùÿÿÿÿ8 ¤°§¼2J$4c76ec14-8813-4250-900b-93facaf925bc
 
-java:S6201P"FReplace this instanceof check and cast with 'instanceof String string'(×µùòøÿÿÿÿ8¤¤°§¼2J$30c1a4e2-7e00-4b69-8825-d4e589c8b693
+java:S6201Q"FReplace this instanceof check and cast with 'instanceof String string'(×µùòøÿÿÿÿ8¤¤°§¼2J$ac1958c6-033a-4079-bc74-ea68057f4077
 ‰
-java:S6201R"FReplace this instanceof check and cast with 'instanceof Number number'(É ‚Ó8¥¤°§¼2J$1f3b0aff-6e2f-4e9f-b99d-41185ede9159
+java:S6201S"FReplace this instanceof check and cast with 'instanceof Number number'(É ‚Ó8¥¤°§¼2J$e151d4ee-7699-4eed-977c-f3e38e1abd23
 ƒ
-java:S6213•":Rename this variable to not match a restricted identifier.(Ãª§…ùÿÿÿÿ8¥âÚ¨¼2J$3997ab79-cfa9-4132-88a2-3230bd011d2c
-s	java:S106£"+Replace this use of System.out by a logger.(–§ÜÔùÿÿÿÿ8²¤°§¼2J$e295f386-c99d-45bd-8083-d6972179fe14
-Y
-java:S1144}"<Remove this unused private "updatePlaceholdersInRow" method.(÷ğ§8æ¹ç¨¼2
+java:S6213µ":Rename this variable to not match a restricted identifier.(Ãª§…ùÿÿÿÿ8¥âÚ¨¼2J$fc927a92-9168-4058-9154-ac900999506c
+s	java:S106Ã"+Replace this use of System.out by a logger.(–§ÜÔùÿÿÿÿ8²¤°§¼2J$5b626135-490f-490b-a5cc-04837504d4c9
+€
+java:S1144"<Remove this unused private "updatePlaceholdersInRow" method.(÷ğ§8æ¹ç¨¼2J$5a89e3ac-d100-4a47-90e2-ebf9aa64aa73
