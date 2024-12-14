@@ -1,8 +1,14 @@
 
+“
+java:S1192‰"JDefine a constant instead of duplicating this literal "unitPrice" 3 times.(ßÃÈìıÿÿÿÿ8Öø®¥¼2J$691c3f5b-d5fd-48dc-bbdf-2b56dcf73bbc
 ’
-java:S2095"JUse try-with-resources or close this "XSSFWorkbook" in a "finally" clause.(¼Ö‰»üÿÿÿÿ8©Ûüš¼2J$ef46a786-147e-4e20-864b-926f332126b2
-
-java:S2095"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(Û›·ã8©Ûüš¼2J$f8e19501-8535-443f-896b-b6e2ced65c16
-•
-java:S37761"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¼œˆú8ûõûš¼2J$8b20b6b3-ec7b-47b8-9222-6f6d0d4e4691
-s	java:S106„"+Replace this use of System.out by a logger.(–§ÜÔùÿÿÿÿ8ö›¼2J$66752cad-2584-4775-8767-092ee82695d4
+java:S1192‰"IDefine a constant instead of duplicating this literal "fullName" 3 times.(ßÃÈìıÿÿÿÿ8Öø®¥¼2J$ae23dacd-cf81-46a0-9a9f-483142bb7a81
+
+java:S1192‰"FDefine a constant instead of duplicating this literal "index" 3 times.(ßÃÈìıÿÿÿÿ8Öø®¥¼2J$3a294f1b-c488-4e02-b2b3-2fdc9b72cf47
+’
+java:S1192‰"IDefine a constant instead of duplicating this literal "oldIndex" 3 times.(ßÃÈìıÿÿÿÿ8Öø®¥¼2J$0d0dbd51-3587-4b44-a9a9-69bc0ccdb090
+’
+java:S1192‰"IDefine a constant instead of duplicating this literal "newIndex" 3 times.(ßÃÈìıÿÿÿÿ8Öø®¥¼2J$07123136-d7ce-4eaa-81db-87e7e123713d
+š
+java:S3776/"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ò†™ùÿÿÿÿ8Ëù®¥¼2J$3c3d2cb0-01e0-45f5-b852-4ae7111506ba
+s	java:S106”"+Replace this use of System.out by a logger.(–§ÜÔùÿÿÿÿ8Ñù®¥¼2J$f25317c7-2e7c-4e23-b17f-75ba3558e8a6
