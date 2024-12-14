@@ -1,16 +1,11 @@
 
-
-java:S2095"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(Û›·ã8Ô›´«¼2J$f3e0be1f-5680-4297-b661-cbcde37826d4
-’
-java:S2095"JUse try-with-resources or close this "XSSFWorkbook" in a "finally" clause.(¼Ö‰»üÿÿÿÿ8Ô›´«¼2J$8436fc07-a563-4308-8d3e-c7723895d505
-š
-java:S3776A"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(Ò†™ùÿÿÿÿ8 ¤°§¼2J$4c76ec14-8813-4250-900b-93facaf925bc
 
-java:S6201Q"FReplace this instanceof check and cast with 'instanceof String string'(×µùòøÿÿÿÿ8¤¤°§¼2J$ac1958c6-033a-4079-bc74-ea68057f4077
+java:S6201Y"FReplace this instanceof check and cast with 'instanceof String string'(×µùòøÿÿÿÿ8ÿ®®¬¼2J$b93482c8-37e0-480d-9b26-31d31f9a102b
 ‰
-java:S6201S"FReplace this instanceof check and cast with 'instanceof Number number'(É ‚Ó8¥¤°§¼2J$e151d4ee-7699-4eed-977c-f3e38e1abd23
+java:S6201["FReplace this instanceof check and cast with 'instanceof Number number'(É ‚Ó8ÿ®®¬¼2J$116824bf-41f7-4927-8d67-8f41e729a9fc
+¡	java:S131"YComplete cases by adding the missing enum constants or add a default case to this switch.(°§ß¢ÿÿÿÿÿ8ƒ¯®¬¼2J$cbf10368-95e8-4963-aabc-206b35fdebdf
 ƒ
-java:S6213µ":Rename this variable to not match a restricted identifier.(Ãª§…ùÿÿÿÿ8¥âÚ¨¼2J$fc927a92-9168-4058-9154-ac900999506c
-s	java:S106Ã"+Replace this use of System.out by a logger.(–§ÜÔùÿÿÿÿ8²¤°§¼2J$5b626135-490f-490b-a5cc-04837504d4c9
-€
-java:S1144"<Remove this unused private "updatePlaceholdersInRow" method.(÷ğ§8æ¹ç¨¼2J$5a89e3ac-d100-4a47-90e2-ebf9aa64aa73
+java:S6213’":Rename this variable to not match a restricted identifier.(Ãª§…ùÿÿÿÿ8‡¯®¬¼2J$c8de3add-f551-4827-8d92-178a23942bc2
+s	java:S106®"+Replace this use of System.out by a logger.(–§ÜÔùÿÿÿÿ8¤ë²¬¼2J$bb915ab3-ab05-4402-b97e-7093a6d2d949
+l
+java:S1128	")Remove this unused import 'java.io.File'.(†Ğ¥Å8êÒ³¬¼2J$0169b87e-4c0e-4700-abde-50742afb47d1

@@ -1,21 +1,21 @@
 
 œ
-java:S1104"TMake filePath a static final constant or non-public and provide accessors if needed.(ïØ»úÿÿÿÿ8îçù¼2J$ba06b272-cf97-4dd0-9363-70d9b4c1895f
+java:S1104"TMake filePath a static final constant or non-public and provide accessors if needed.(ïØ»úÿÿÿÿ8îçù¼2J$e16c3680-4342-40f0-b25f-4a85435df9ec
 §
-java:S1104"_Make invoiceTemplatePath a static final constant or non-public and provide accessors if needed.(§ÏúØùÿÿÿÿ8îçù¼2J$1420c46c-a251-4ba2-9c42-22acbdd203f8
+java:S1104"_Make invoiceTemplatePath a static final constant or non-public and provide accessors if needed.(§ÏúØùÿÿÿÿ8îçù¼2J$01112c33-897b-4082-bac2-3a005ac88bd7
 ™
-java:S1104"VMake outputPath a static final constant or non-public and provide accessors if needed.(ˆåŞë8îçù¼2J$0bf2dd40-7b2c-462e-976a-44ed41185f0f
+java:S1104"VMake outputPath a static final constant or non-public and provide accessors if needed.(ˆåŞë8îçù¼2J$55b5fbb7-af4c-4421-aa98-cf26dbc785e0
 v
-java:S1444".Make this "public static filePath" field final(ïØ»úÿÿÿÿ8ïçù¼2J$d412169d-73da-4fdd-868f-2521810c9111
+java:S1444".Make this "public static filePath" field final(ïØ»úÿÿÿÿ8ïçù¼2J$a8203eb9-eea7-4cd3-a140-5c4fed414760
 
-java:S1444"9Make this "public static invoiceTemplatePath" field final(§ÏúØùÿÿÿÿ8ïçù¼2J$2e7676c6-83e6-4490-8e36-ef7a24ce8872
+java:S1444"9Make this "public static invoiceTemplatePath" field final(§ÏúØùÿÿÿÿ8ïçù¼2J$8f4a5db9-2029-47e1-a854-22d55b309b16
 s
-java:S1444"0Make this "public static outputPath" field final(ˆåŞë8ğçù¼2J$5fcbe9d7-14ca-415a-bee2-5020335b471d
+java:S1444"0Make this "public static outputPath" field final(ˆåŞë8ğçù¼2J$3205a452-7d5a-4efb-94ce-6aee86174b8d
 }
-java:S1118":Add a private constructor to hide the implicit public one.(û™“µ8Ğ§ù¼2J$9964fcd0-f91a-483d-8588-1584dd331dbd
+java:S1118":Add a private constructor to hide the implicit public one.(û™“µ8Ğ§ù¼2J$74887251-dc8a-400d-8533-bd6051851c15
 ‰
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(ïØ»úÿÿÿÿ8Ñ§ù¼2J$ba437b72-1dcd-414b-8f35-d82c23c5eee7
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(ïØ»úÿÿÿÿ8Ñ§ù¼2J$43802bd4-531e-4cea-90a6-984ed49a48e2
 ‰
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(§ÏúØùÿÿÿÿ8Ò§ù¼2J$479106d7-02f1-484c-9e92-cb871f3b89b5
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(§ÏúØùÿÿÿÿ8Ò§ù¼2J$ebd9782d-7a2f-4939-8356-a079de971ffb
 „
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(ˆåŞë8‹ú½ƒ¼2J$f5f1a055-f115-4f9d-9910-ecc54db0129e
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(ˆåŞë8‹ú½ƒ¼2J$3ba9913d-3d3f-4db8-8737-b23d9c540910

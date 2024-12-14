@@ -12,20 +12,20 @@ import java.util.List;
 
 public class ExcelReader {
 
+    /**
+     * <ul>
+     *  <li> STT (Index) </li>
+     *  <li> Họ Tên (Customer Name)</li>
+     *  <li> Chỉ số cũ (Old Index)</li>
+     *  <li> Chỉ số mới (New Index)</li>
+     *  <li> Số trong tháng (Units in Month)</li>
+     *  <li> Đơn giá (Unit Price)</li>
+     *  <li> Thành tiền (Amount)</li>
+     *  <li> Công ghi điện (Recording Fee)</li>
+     *  <li> Tổng thanh toán (Total Payment)</li>
+     * </ul>
+     */
     public static class ElectricBillRecord {
-        /**
-         * <ul>
-         *  <li> STT (Index) </li>
-         *  <li> Họ Tên (Customer Name)</li>
-         *  <li> Chỉ số cũ (Old Index)</li>
-         *  <li> Chỉ số mới (New Index)</li>
-         *  <li> Số trong tháng (Units in Month)</li>
-         *  <li> Đơn giá (Unit Price)</li>
-         *  <li> Thành tiền (Amount)</li>
-         *  <li> Công ghi điện (Recording Fee)</li>
-         *  <li> Tổng thanh toán (Total Payment)</li>
-         * </ul>
-         */
         public int index;
         public String customerName;
         public double oldIndex;

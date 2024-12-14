@@ -1,5 +1,5 @@
 
-	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¡¯æØº2J$0e0598de-845b-48d5-b070-470be91dc320
-r	java:S106&"+Replace this use of System.out by a logger.(–§ÜÔùÿÿÿÿ8Ÿ¢ÇÙº2J$be91d4c4-db97-4c6e-929e-2d8ed694bfdf
+	java:S112'"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¡¯æØº2J$36d27d9c-028a-450e-a670-c302ab5c4054
+r	java:S106%"+Replace this use of System.out by a logger.(–§ÜÔùÿÿÿÿ8Ÿ¢ÇÙº2J$72c8d7d6-109c-4a64-9b62-9051ba7c67d1
 š
-java:S3776,"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(‘äƒèúÿÿÿÿ8Ç°æØº2J$a720ef2a-d0f2-407d-beb4-0851ea629527
+java:S3776+"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(‘äƒèúÿÿÿÿ8Ç°æØº2J$322bbf56-429e-4c21-ac5e-5a412832cbd2

@@ -16,58 +16,59 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * With version 1.1:
- * Change the business - Generated template first -> Update Placeholder later
+ * With version 1.2:
+ * Complete the generated invoices
+ * Changes: Code clean
  */
 public class InvoiceGenerator {
 
     public static void mapDataToTemplate(String templatePath,
                                          String outputPath,
                                          List<Map<String, Object>> data) throws IOException {
-        // Load the template
-        FileInputStream fis = new FileInputStream(new File(templatePath));
-        XSSFWorkbook workbook = new XSSFWorkbook(fis);
-        XSSFSheet sheet = workbook.getSheetAt(0);
+        try (FileInputStream fis = new FileInputStream(templatePath);
+             XSSFWorkbook workbook = new XSSFWorkbook(fis)) {
 
-        // Define the template row range
-        int startRow = 0;  // Adjust based on template
-        int endRow = 11;   // Last row of the template section
+            XSSFSheet sheet = workbook.getSheetAt(0);
+            int startRow = 0;
+            int endRow = 11;
+            int currentRow = endRow + 1;
 
-        int currentRow = endRow + 1; // Start writing after the template section
-
-        for (Map<String, Object> rowData : data) {
-            // Generate template for each record
-            int generatedRowStart = currentRow;
-            int generatedRowEnd = currentRow + (endRow - startRow);
-
-            for (int i = startRow; i <= endRow; i++) {
-                Row sourceRow = sheet.getRow(i);
-                Row targetRow = sheet.createRow(currentRow++);
-
-                if (sourceRow != null) {
-                    copyRow(sheet, sourceRow, targetRow);
-                }
+            // Process each data row and generate the invoice
+            for (Map<String, Object> rowData : data) {
+                generateInvoice(sheet, startRow, endRow, rowData, currentRow);
+                currentRow += (endRow - startRow + 1);
             }
 
-            // Update placeholders in the generated rows
-            updatePlaceholders(sheet, generatedRowStart, generatedRowEnd, rowData);
+            saveWorkbook(workbook, outputPath);
         }
-
-        // Save the updated file
-        FileOutputStream fos = new FileOutputStream(new File(outputPath));
-        workbook.write(fos);
-        fos.close();
-        workbook.close();
-        fis.close();
     }
 
-    // Function to update placeholders in the template section
-    private static void updatePlaceholders(
-            Sheet sheet,
-            int startRow,
-            int endRow,
-            Map<String, Object> rowData
-    ) {
+    private static void generateInvoice(Sheet sheet,
+                                        int startRow,
+                                        int endRow,
+                                        Map<String, Object> rowData,
+                                        int currentRow) {
+        int generatedRowStart = currentRow;
+        int generatedRowEnd = currentRow + (endRow - startRow);
+
+        // Copy rows from template
+        copyTemplateRows(sheet, startRow, endRow, currentRow);
+
+        // Update placeholders in the generated rows
+        updatePlaceholders(sheet, generatedRowStart, generatedRowEnd, rowData);
+    }
+
+    private static void copyTemplateRows(Sheet sheet, int startRow, int endRow, int currentRow) {
+        for (int i = startRow; i <= endRow; i++) {
+            Row sourceRow = sheet.getRow(i);
+            Row targetRow = sheet.createRow(currentRow++);
+            if (sourceRow != null) {
+                copyRow(sheet, sourceRow, targetRow);
+            }
+        }
+    }
+
+    private static void updatePlaceholders(Sheet sheet, int startRow, int endRow, Map<String, Object> rowData) {
         for (int rowIndex = startRow; rowIndex <= endRow; rowIndex++) {
             Row row = sheet.getRow(rowIndex);
             if (row == null) continue;
@@ -75,36 +76,34 @@ public class InvoiceGenerator {
             for (Cell cell : row) {
                 if (cell.getCellType() == CellType.STRING) {
                     String cellValue = cell.getStringCellValue();
-                    // Replace placeholders with corresponding values
-                    for (Map.Entry<String, Object> entry : rowData.entrySet()) {
-                        if (cellValue.contains("{{" + entry.getKey() + "}}")) {
-                            if (entry.getValue() instanceof String) {
-                                cell.setCellValue(cellValue.replace("{{" + entry.getKey() + "}}", (String) entry.getValue()));
-                            } else if (entry.getValue() instanceof Number) {
-                                cell.setCellValue(((Number) entry.getValue()).doubleValue());
-                            }
-                        }
-                    }
+                    replacePlaceholders(cell, cellValue, rowData);
                 }
             }
         }
     }
 
-    // Function to copy template and fill data for subsequent rows
+    private static void replacePlaceholders(Cell cell, String cellValue, Map<String, Object> rowData) {
+        for (Map.Entry<String, Object> entry : rowData.entrySet()) {
+            String placeholder = "{{" + entry.getKey() + "}}";
+            if (cellValue.contains(placeholder)) {
+                if (entry.getValue() instanceof String) {
+                    cell.setCellValue(cellValue.replace(placeholder, (String) entry.getValue()));
+                } else if (entry.getValue() instanceof Number) {
+                    cell.setCellValue(((Number) entry.getValue()).doubleValue());
+                }
+            }
+        }
+    }
 
-    // Function to copy styles and content of a row
     private static void copyRow(Sheet sheet, Row sourceRow, Row targetRow) {
         if (sourceRow == null || targetRow == null) return;
 
-        // Copy the row height from the source to the target
         targetRow.setHeight(sourceRow.getHeight());
-
         for (Cell sourceCell : sourceRow) {
             Cell targetCell = targetRow.createCell(sourceCell.getColumnIndex());
             copyCell(sourceCell, targetCell);
         }
 
-        // Copy merged regions
         copyMergedRegions(sheet, sourceRow, targetRow);
     }
 
@@ -116,68 +115,34 @@ public class InvoiceGenerator {
             CellRangeAddress region = sheet.getMergedRegion(i);
             if (region.getFirstRow() == sourceRowNum && region.getLastRow() == sourceRowNum) {
                 CellRangeAddress newRegion = new CellRangeAddress(
-                        targetRowNum,
-                        targetRowNum,
-                        region.getFirstColumn(),
-                        region.getLastColumn()
-                );
+                        targetRowNum, targetRowNum, region.getFirstColumn(), region.getLastColumn());
                 sheet.addMergedRegion(newRegion);
             }
         }
     }
 
-    // Function to copy individual cell content and style
     private static void copyCell(Cell sourceCell, Cell targetCell) {
         if (sourceCell == null || targetCell == null) return;
 
         targetCell.setCellStyle(sourceCell.getCellStyle());
 
         switch (sourceCell.getCellType()) {
-            case STRING:
-                targetCell.setCellValue(sourceCell.getStringCellValue());
-                break;
-            case NUMERIC:
-                targetCell.setCellValue(sourceCell.getNumericCellValue());
-                break;
-            case BOOLEAN:
-                targetCell.setCellValue(sourceCell.getBooleanCellValue());
-                break;
-            case FORMULA:
-                targetCell.setCellFormula(sourceCell.getCellFormula());
-                break;
-            case BLANK:
-                targetCell.setBlank();
-                break;
-            default:
-                break;
+            case STRING -> targetCell.setCellValue(sourceCell.getStringCellValue());
+            case NUMERIC -> targetCell.setCellValue(sourceCell.getNumericCellValue());
+            case BOOLEAN -> targetCell.setCellValue(sourceCell.getBooleanCellValue());
+            case FORMULA -> targetCell.setCellFormula(sourceCell.getCellFormula());
+            case BLANK -> targetCell.setBlank();
         }
     }
 
-    // Function to update placeholders in a single row
-    private static void updatePlaceholdersInRow(Row row, Map<String, String> rowData) {
-        for (Cell cell : row) {
-            if (cell.getCellType() == CellType.STRING) {
-                String cellValue = cell.getStringCellValue();
-                for (Map.Entry<String, String> entry : rowData.entrySet()) {
-                    if (cellValue.contains("{{" + entry.getKey() + "}}")) {
-                        cell.setCellValue(cellValue.replace("{{" + entry.getKey() + "}}", entry.getValue()));
-                    }
-                }
-            }
+    private static void saveWorkbook(XSSFWorkbook workbook, String outputPath) throws IOException {
+        try (FileOutputStream fos = new FileOutputStream(outputPath)) {
+            workbook.write(fos);
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        // Define file paths
-        String inputFilePath = "data/final/input/ElectricityManagement.xlsx";
-        String templatePath = "data/final/input/HoaDon2023_Template.xlsx";
-        String outputPath = "data/final/output/GeneratedInvoices.xlsx"; // Replace with your desired output file path
-
-        // Read input data from Excel file
-        List<ExcelReader.ElectricBillRecord> records = ExcelReader.readInputFile(inputFilePath);
-        // Convert records to a format compatible with the template
+    private static List<Map<String, Object>> convertToTemplateData(List<ExcelReader.ElectricBillRecord> records) {
         List<Map<String, Object>> data = new ArrayList<>();
-
         for (ExcelReader.ElectricBillRecord record : records) {
             Map<String, Object> rowData = new HashMap<>();
             rowData.put("index", record.index);
@@ -189,7 +154,21 @@ public class InvoiceGenerator {
             rowData.put("totalPayment", record.totalPayment);
             data.add(rowData);
         }
+        return data;
+    }
 
+    public static void main(String[] args) throws IOException {
+        String inputFilePath = "data/final/input/ElectricityManagement.xlsx";
+        String templatePath = "data/final/input/HoaDon2023_Template.xlsx";
+        String outputPath = "data/final/output/GeneratedInvoices.xlsx";
+
+        // Read input data
+        List<ExcelReader.ElectricBillRecord> records = ExcelReader.readInputFile(inputFilePath);
+
+        // Prepare data for template
+        List<Map<String, Object>> data = convertToTemplateData(records);
+
+        // Generate invoices
         mapDataToTemplate(templatePath, outputPath, data);
 
         System.out.println("Invoices generated successfully!");
