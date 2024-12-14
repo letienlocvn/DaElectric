@@ -1,0 +1,23 @@
+
+s
+java:S1104%"QMake index a static final constant or non-public and provide accessors if needed.(×´úÕúÿÿÿÿ8ª°‹—¼2
+z
+java:S1104&"XMake customerName a static final constant or non-public and provide accessors if needed.(—ÃïÂøÿÿÿÿ8ª°‹—¼2
+v
+java:S1104'"TMake oldIndex a static final constant or non-public and provide accessors if needed.(æì¯úÿÿÿÿ8ª°‹—¼2
+v
+java:S1104("TMake newIndex a static final constant or non-public and provide accessors if needed.(¨êß•ÿÿÿÿÿ8ª°‹—¼2
+u
+java:S1104)"XMake unitsInMonth a static final constant or non-public and provide accessors if needed.(®¶à¢8ª°‹—¼2
+w
+java:S1104*"UMake unitPrice a static final constant or non-public and provide accessors if needed.(¬ˆÆ§ùÿÿÿÿ8ª°‹—¼2
+t
+java:S1104+"RMake amount a static final constant or non-public and provide accessors if needed.(¶â¤·ıÿÿÿÿ8ª°‹—¼2
+z
+java:S1104,"XMake recordingFee a static final constant or non-public and provide accessors if needed.(ÏÊ±™ùÿÿÿÿ8ª°‹—¼2
+u
+java:S1104-"XMake totalPayment a static final constant or non-public and provide accessors if needed.(¥€ÄÜ8«°‹—¼2
+}
+java:S1118":Add a private constructor to hide the implicit public one.(·øÇ8Æ´€—¼2J$c9b9f454-09bc-48df-a108-34cffff9963c
+‚
+java:S6213F":Rename this variable to not match a restricted identifier.(ææ­Ğøÿÿÿÿ8°Ã…—¼2J$2335d54e-3828-4362-b608-b6a2143f9d9e

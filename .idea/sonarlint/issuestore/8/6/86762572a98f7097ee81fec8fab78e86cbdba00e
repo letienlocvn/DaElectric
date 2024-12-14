@@ -1,0 +1,8 @@
+
+’
+java:S2095"JUse try-with-resources or close this "XSSFWorkbook" in a "finally" clause.(¼Ö‰»üÿÿÿÿ8©Ûüš¼2J$ef46a786-147e-4e20-864b-926f332126b2
+
+java:S2095"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(Û›·ã8©Ûüš¼2J$f8e19501-8535-443f-896b-b6e2ced65c16
+•
+java:S37761"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¼œˆú8ûõûš¼2J$8b20b6b3-ec7b-47b8-9222-6f6d0d4e4691
+s	java:S106„"+Replace this use of System.out by a logger.(–§ÜÔùÿÿÿÿ8ö›¼2J$66752cad-2584-4775-8767-092ee82695d4

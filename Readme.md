@@ -48,3 +48,70 @@ Các trường cố định là công ghi điện. hoặc nội dung description
    Nếu dữ liệu từ file đầu vào bị thiếu hoặc không khớp, Tùy từng trường hợp. Ở phần này sẽ phát triển dựa trên các yêu cầu. Nhưng trước mắt hãy cố gắng xử lý hợp lý logic nhất có thể.
    Có cần nhật ký (log) để báo cáo các dòng lỗi hoặc không thể xử lý không: Có
 
+
+
+**Template
+Let me describle for you about the template HoaDon2023_Template.xlsx
+
+It contains two sections, each labeled "Liên" (meaning "Section")
+
+Left Side (A, B column)
+Here's a breakdown of the information:
+
+Header: (A1:B1) - Merged & Center content
+TRẠM ĐIỆN XÓM HOÀI NHƠN
+GIẤY BÁO ĐIỆN
+Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam
+Độc lập - Tự do - Hạnh phúc: "Independence - Freedom - Happiness
+
+Body:
+A2 Tháng: B2 {{month}}
+A3 index: B3 {{index}}
+A4 Tên: B4 {{fullName}}
+A5 Chỉ số cũ: B5 {{oldIndex}}
+A6 Chỉ số mới: B6 {{newIndex}}
+A7 Điện tiêu thụ: B7 (#VALUE!)
+A8 Đơn giá: B8  {{unitPrice}}
+A9 Công ghi điện: B9 20000
+A10 Tổng tiền thanh toán: B10 (#VALUE!)
+
+Footer: Merged & Center content
+(A12:B12): Đak Đoa, ngày tháng năm 2024
+(A13:B13): Người nộp tiền
+
+Additional Notes:
+The "#VALUE!" entries indicate missing or invalid data. (I using the Formulae)
+(A12:B12): Merged & Center content, align right
+(A13:B13): Merged & Center content
+
+Column C: Blank column, used to divide between 2 sections
+
+Right Side section (D, E column)
+
+Header: (D1:E1) - Merged & Center content
+Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam
+Độc lập - Tự do - Hạnh phúc
+Số điện thoại sửa chữa: 0989820167
+GIẤY BÁO (THU TIỀN ĐIỆN)
+Liên: 2
+
+
+Body:
+D2 Tháng: E2 {{month}}
+D3 index: E3 {{index}}
+D4 Tên : E4 {{fullName}}
+D5 Chỉ số cũ : E5 #VALUE!
+D6 Chỉ số mới : E6 #VALUE!
+D7 Điện tiêu thụ : E7 #VALUE!
+D8 Đơn giá : E8 #VALUE!
+D9 Công ghi điện : E9 #VALUE!
+D10 Tổng tiền thanh toán: E10 #VALUE!
+
+Additional Notes:
+The "#VALUE!" entries indicate missing or invalid data. (I using the Formulae)
+(D11:E11) The bill includes payment instructions and penalties for late payments.
+
+Footer Information:
+The "#VALUE!" entries indicate missing or invalid data. (I using the Formulae)
+(D12:E12): Merged & Center content, align right
+(D13:D13): Merged & Center content

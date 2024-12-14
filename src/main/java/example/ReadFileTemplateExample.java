@@ -9,8 +9,7 @@ import java.io.IOException;
 public class ReadFileTemplateExample {
 
     public static void main(String[] args) {
-        String filePath = "D:\\Loclt\\Project_out\\loclt7\\DaElectric\\src\\HoaDon2023.xlsx";
-
+        String filePath = "D:\\Loclt\\Project_out\\loclt7\\DaElectric\\src\\HoaDon2023_Template.xlsx";
         try {
             readAllData(filePath);
         } catch (IOException e) {

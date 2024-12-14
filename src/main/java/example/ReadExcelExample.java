@@ -9,11 +9,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import static configure.FileConfiguration.*;
 
 public class ReadExcelExample {
-    static String filePath = "D:\\Loclt\\Project_out\\loclt7\\DaElectric\\CustomerData.xlsx";
-    static String invoiceTemplatePath = "D:\\Loclt\\Project_out\\loclt7\\DaElectric\\src\\HoaDon2023.xlsx";
-    static String outputPath = "D:\\Loclt\\Project_out\\loclt7\\DaElectric\\GeneratedInvoices.xlsx";
+
 
     public static void main(String[] args) {
         try {
