@@ -115,3 +115,7 @@ Footer Information:
 The "#VALUE!" entries indicate missing or invalid data. (I using the Formulae)
 (D12:E12): Merged & Center content, align right
 (D13:D13): Merged & Center content
+
+Error at:
+STT 52. Nguyễn Văn Phú.
+STT 62. Hùng Tuấn - bản chưa có dữ liệu

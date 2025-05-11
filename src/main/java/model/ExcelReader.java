@@ -1,8 +1,6 @@
 package model;
 
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
@@ -59,7 +57,10 @@ public class ExcelReader {
                 // Skip header row
                 Row row = sheet.getRow(i + 1);
                 if (row == null) continue;
-
+                Cell indexCell = row.getCell(0);
+                if (indexCell == null || indexCell.getCellType() != CellType.NUMERIC) {
+                    continue; // Skip rows where the index cell is missing or not numeric
+                }
                 ElectricBillRecord record = new ElectricBillRecord();
                 record.index = (int) row.getCell(0).getNumericCellValue();
                 record.customerName = row.getCell(1).getStringCellValue();
