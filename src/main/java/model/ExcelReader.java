@@ -19,7 +19,6 @@ public class ExcelReader {
      *  <li> Số trong tháng (Units in Month)</li>
      *  <li> Đơn giá (Unit Price)</li>
      *  <li> Thành tiền (Amount)</li>
-     *  <li> Công ghi điện (Recording Fee)</li>
      *  <li> Tổng thanh toán (Total Payment)</li>
      * </ul>
      */
@@ -31,8 +30,9 @@ public class ExcelReader {
         public double unitsInMonth;
         public double unitPrice;
         public double amount;
-        public double recordingFee;
+        public double tax;
         public double totalPayment;
+        public String category;
 
         @Override
         public String toString() {
@@ -41,6 +41,10 @@ public class ExcelReader {
                     ", customerName='" + customerName + '\'' +
                     ", oldIndex=" + oldIndex +
                     ", newIndex=" + newIndex +
+                    ", unitsInMonth=" + unitsInMonth +
+                    ", unitPrice=" + unitPrice +
+                    ", amount=" + amount +
+                    ", tax=" + tax +
                     ", totalPayment=" + totalPayment +
                     '}';
         }
@@ -69,8 +73,9 @@ public class ExcelReader {
                 record.unitsInMonth = row.getCell(4).getNumericCellValue();
                 record.unitPrice = row.getCell(5).getNumericCellValue();
                 record.amount = row.getCell(6).getNumericCellValue();
-                record.recordingFee = row.getCell(7).getNumericCellValue();
+                record.tax = row.getCell(7).getNumericCellValue();
                 record.totalPayment = row.getCell(8).getNumericCellValue();
+                record.category = row.getCell(9).getStringCellValue();
 
                 records.add(record);
             }
